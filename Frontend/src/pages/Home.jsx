@@ -558,7 +558,6 @@ const CourseLandingPage = () => {
     value={formData.name}
     onChange={handleInputChange}
     required
-    autoComplete="name"
   />
 
   <input
@@ -569,7 +568,6 @@ const CourseLandingPage = () => {
     value={formData.phone}
     onChange={handleInputChange}
     required
-    autoComplete="tel"
   />
 
   <input
@@ -580,7 +578,6 @@ const CourseLandingPage = () => {
     value={formData.email}
     onChange={handleInputChange}
     required
-    autoComplete="email"
   />
 
   <input
