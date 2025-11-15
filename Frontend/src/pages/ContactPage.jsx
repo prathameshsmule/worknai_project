@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Headphones, Mail, MapPin } from "lucide-react";
+import { API_BASE } from "../components/api.jsx"; // 🔥 IMPORTANT
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // ✅ Matching backend contact controller structure
     const mappedData = {
       name: formData.name,
       phone: formData.phone,
@@ -27,15 +27,11 @@ const Contact = () => {
     };
 
     try {
-      // ✅ Correct API endpoint for Contact Form Enquiries
-      const response = await fetch(
-        "http://localhost:5000/api/enquiry/contact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(mappedData),
-        }
-      );
+      const response = await fetch(`${API_BASE}/enquiry/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(mappedData),
+      });
 
       if (response.ok) {
         alert("✅ Thank you! Your message was submitted successfully.");
@@ -48,11 +44,11 @@ const Contact = () => {
         });
       } else {
         const err = await response.json();
-        alert("❌ Failed to submit: " + (err.message || "Please try again."));
+        alert("❌ Submission Failed: " + err.message);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("⚠️ Something went wrong. Please check your connection.");
+      alert("⚠️ Error submitting form. Check connection.");
     }
   };
 
@@ -77,10 +73,8 @@ const Contact = () => {
             borderRadius: "25px",
             fontSize: "14px",
             fontWeight: "600",
-            letterSpacing: "1px",
             cursor: "pointer",
             marginBottom: "40px",
-            transition: "all 0.3s ease",
           }}
         >
           CONTACT US
@@ -93,7 +87,6 @@ const Contact = () => {
             fontSize: "64px",
             fontWeight: "800",
             color: "#1f2937",
-            margin: "0",
           }}
         >
           Your Only Tech Upgrade Choice
@@ -108,7 +101,6 @@ const Contact = () => {
           gap: "30px",
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "0 20px",
         }}
       >
         <div
@@ -123,6 +115,7 @@ const Contact = () => {
           <p>+91 - 9923400442</p>
           <p>+91 - 9923400414</p>
         </div>
+
         <div
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -131,9 +124,10 @@ const Contact = () => {
           }}
         >
           <Mail size={48} color="#6366f1" />
-          <h3>Our Email Address</h3>
+          <h3>Email Address</h3>
           <p>worknai009@gmail.com</p>
         </div>
+
         <div
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -149,7 +143,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Form Section */}
+      {/* Contact Form */}
       <div
         style={{
           maxWidth: "900px",
@@ -182,6 +176,7 @@ const Contact = () => {
             required
             style={inputStyle}
           />
+
           <input
             type="email"
             name="email"
@@ -191,6 +186,7 @@ const Contact = () => {
             required
             style={inputStyle}
           />
+
           <input
             type="tel"
             name="phone"
@@ -200,6 +196,7 @@ const Contact = () => {
             required
             style={inputStyle}
           />
+
           <input
             type="text"
             name="subject"
@@ -209,6 +206,7 @@ const Contact = () => {
             required
             style={inputStyle}
           />
+
           <textarea
             name="message"
             placeholder="Message*"
@@ -218,16 +216,17 @@ const Contact = () => {
             required
             style={inputStyle}
           />
+
           <button
             type="submit"
             style={{
-              background: "linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)",
+              background: "linear-gradient(135deg, #a855f7, #7c3aed)",
               color: "white",
-              border: "none",
               padding: "18px 40px",
               borderRadius: "12px",
               fontSize: "16px",
               fontWeight: "700",
+              border: "none",
               cursor: "pointer",
             }}
           >
@@ -247,7 +246,6 @@ const inputStyle = {
   color: "#6b7280",
   backgroundColor: "transparent",
   outline: "none",
-  transition: "border-color 0.3s ease",
 };
 
 export default Contact;
