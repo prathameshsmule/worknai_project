@@ -1,6 +1,5 @@
 // src/config/api.js
 // Use Vite env var if set, otherwise fallback to your server IP (use https in production)
 export const API_BASE =
-  import.meta.env.VITE_API_URL ||
-  // fallback to your server IP (use only for local/dev if you haven't set VITE_API_URL)
-  "http://72.61.173.161:5000/api";
+  process.env.REACT_APP_API_URL ||
+  "https://worknai.online/api";
