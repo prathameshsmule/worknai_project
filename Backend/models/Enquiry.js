@@ -34,27 +34,7 @@ const enquirySchema = new mongoose.Schema(
       default: null,
     },
 
-    // Company Enquiry Fields (for future use)
-    companyName: {
-      type: String,
-      trim: true,
-      default: null,
-    },
-    companyDetails: {
-      type: String,
-      trim: true,
-      default: null,
-    },
-    companyAddress: {
-      type: String,
-      trim: true,
-      default: null,
-    },
-    contactPersonName: {
-      type: String,
-      trim: true,
-      default: null,
-    },
+
 
     // Enquiry Type (to differentiate between Student / Company)
     enquiryType: {
