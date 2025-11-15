@@ -185,10 +185,13 @@ body {
   letter-spacing: 0.5px;
 } */
 
-.logo-title, .logo-subtitle {
-  background: linear-gradient(135deg, #ff4fd8 0%, #4f8bff 100%);
+.logo-title, 
+.logo-subtitle {
+  font-weight: 800; /* Extra Bold */
+  background: linear-gradient(135deg, #ff3fbf 0%, #3f7bff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 0.6px; /* premium spacing */
 }
 
 
