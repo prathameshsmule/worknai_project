@@ -314,36 +314,44 @@ const CourseLandingPage = () => {
     window.location.href = url;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      const res = await fetch(`${API_BASE}/enquiry/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        alert("✅ " + data.message);
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-        setShowContactForm(false);
-      } else {
-        alert("❌ " + (data.message || "Failed to submit form"));
-      }
-    } catch (error) {
-      console.error("Error submitting contact form:", error);
-      alert("⚠️ Error submitting form. Check console or backend connection.");
-    }
+  const mappedData = {
+    name: formData.name,
+    phone: formData.phone,
+    email: formData.email,
+    subject: formData.subject,
+    message: formData.message,
   };
+
+  try {
+    const res = await fetch(`${API_BASE}/enquiry/contact`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(mappedData),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert("✅ " + data.message);
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setShowContactForm(false);
+    } else {
+      alert("❌ " + (data.message || "Failed to submit form"));
+    }
+  } catch (error) {
+    console.error("Error submitting contact form:", error);
+    alert("⚠️ Cannot submit form. Backend not reachable.");
+  }
+};
 
   const handleInputChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
