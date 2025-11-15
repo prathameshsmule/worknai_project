@@ -609,7 +609,7 @@ const CourseLandingPage = () => {
 
         {/* Chat Widget */}
         <a
-          href="https://wa.me/918888848588"
+          href="https://wa.me/9923400442"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.chatWidget}
