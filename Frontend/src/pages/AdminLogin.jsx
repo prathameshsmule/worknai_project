@@ -1,7 +1,6 @@
 // src/pages/AdminLogin.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_BASE } from "../components/api.jsx";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +10,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${API_BASE}/auth/admin/login`, {
+      const res = await fetch("https://worknai.online/api/auth/admin/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +30,7 @@ const AdminLogin = () => {
       navigate("/admin-dashboard");
     } catch (error) {
       console.error("Login error:", error);
-      alert("Something went wrong. Try again later.");
+      alert("❌ Something went wrong. Try again later.");
     }
   };
 
