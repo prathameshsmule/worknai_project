@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import styles from "../styles/Home.module.css";
 import worknAiLogo from "../assets/worknAI logo.jpeg";
-
+import { API_BASE } from "../components/api.jsx"; 
 const CourseLandingPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showContactForm, setShowContactForm] = useState(false);
