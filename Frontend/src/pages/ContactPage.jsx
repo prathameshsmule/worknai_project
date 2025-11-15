@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Headphones, Mail, MapPin } from "lucide-react";
-import { API_BASE } from "../components/api.jsx"; // 🔥 IMPORTANT
+import { API_BASE } from "../components/api.jsx"; 
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,22 +33,23 @@ const Contact = () => {
         body: JSON.stringify(mappedData),
       });
 
-      if (response.ok) {
-        alert("✅ Thank you! Your message was submitted successfully.");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
-      } else {
+      if (!response.ok) {
         const err = await response.json();
         alert("❌ Submission Failed: " + err.message);
+        return;
       }
+
+      alert("✅ Thank you! Your message was submitted successfully.");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("⚠️ Error submitting form. Check connection.");
+      alert("⚠️ Server not reachable. Check your internet or try again.");
     }
   };
 
@@ -58,8 +59,6 @@ const Contact = () => {
         minHeight: "100vh",
         background: "linear-gradient(to bottom, #e9d5f5 0%, #f0e5f8 100%)",
         padding: "60px 20px",
-        fontFamily:
-          '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif',
       }}
     >
       {/* Header */}
@@ -68,13 +67,10 @@ const Contact = () => {
           style={{
             backgroundColor: "rgba(200, 150, 230, 0.4)",
             color: "#a855f7",
-            border: "none",
             padding: "12px 32px",
             borderRadius: "25px",
-            fontSize: "14px",
-            fontWeight: "600",
-            cursor: "pointer",
-            marginBottom: "40px",
+            border: "none",
+            fontWeight: 600,
           }}
         >
           CONTACT US
@@ -103,44 +99,32 @@ const Contact = () => {
           margin: "0 auto",
         }}
       >
-        <div
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.7)",
-            borderRadius: "20px",
-            padding: "50px 40px",
-          }}
-        >
-          <Headphones size={48} color="#6366f1" />
-          <h3>Contact Phone Number</h3>
-          <p>+91 - 9923400442</p>
-          <p>+91 - 9923400414</p>
-        </div>
+        <ContactCard
+          icon={<Headphones size={48} color="#6366f1" />}
+          title="Contact Phone Number"
+          content={
+            <>
+              <p>+91 - 9923400442</p>
+              <p>+91 - 9923400414</p>
+            </>
+          }
+        />
 
-        <div
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.7)",
-            borderRadius: "20px",
-            padding: "50px 40px",
-          }}
-        >
-          <Mail size={48} color="#6366f1" />
-          <h3>Email Address</h3>
-          <p>worknai009@gmail.com</p>
-        </div>
+        <ContactCard
+          icon={<Mail size={48} color="#6366f1" />}
+          title="Email Address"
+          content={<p>worknai009@gmail.com</p>}
+        />
 
-        <div
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.7)",
-            borderRadius: "20px",
-            padding: "50px 40px",
-          }}
-        >
-          <MapPin size={48} color="#6366f1" />
-          <h3>Head Office</h3>
-          <p>
-            Unit 101, Oxford Towers, Airport Road, Bangalore, Karnataka 560008
-          </p>
-        </div>
+        <ContactCard
+          icon={<MapPin size={48} color="#6366f1" />}
+          title="Head Office"
+          content={
+            <p>
+              Unit 101, Oxford Towers, Airport Road, Bangalore, Karnataka 560008
+            </p>
+          }
+        />
       </div>
 
       {/* Contact Form */}
@@ -171,6 +155,7 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="Name*"
+            autoComplete="name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -181,6 +166,7 @@ const Contact = () => {
             type="email"
             name="email"
             placeholder="Email*"
+            autoComplete="email"
             value={formData.email}
             onChange={handleChange}
             required
@@ -191,6 +177,7 @@ const Contact = () => {
             type="tel"
             name="phone"
             placeholder="Phone*"
+            autoComplete="tel"
             value={formData.phone}
             onChange={handleChange}
             required
@@ -201,6 +188,7 @@ const Contact = () => {
             type="text"
             name="subject"
             placeholder="Subject*"
+            autoComplete="off"
             value={formData.subject}
             onChange={handleChange}
             required
@@ -211,6 +199,7 @@ const Contact = () => {
             name="message"
             placeholder="Message*"
             rows="4"
+            autoComplete="off"
             value={formData.message}
             onChange={handleChange}
             required
@@ -225,7 +214,7 @@ const Contact = () => {
               padding: "18px 40px",
               borderRadius: "12px",
               fontSize: "16px",
-              fontWeight: "700",
+              fontWeight: 700,
               border: "none",
               cursor: "pointer",
             }}
@@ -237,6 +226,20 @@ const Contact = () => {
     </div>
   );
 };
+
+const ContactCard = ({ icon, title, content }) => (
+  <div
+    style={{
+      backgroundColor: "rgba(255, 255, 255, 0.7)",
+      borderRadius: "20px",
+      padding: "50px 40px",
+    }}
+  >
+    {icon}
+    <h3>{title}</h3>
+    {content}
+  </div>
+);
 
 const inputStyle = {
   border: "none",
