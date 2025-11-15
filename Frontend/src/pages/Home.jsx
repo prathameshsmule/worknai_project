@@ -1,18 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import styles from "../styles/Home.module.css";
 import worknAiLogo from "../assets/worknAI logo.jpeg";
-import { API_BASE } from "../components/api.jsx"; 
+
 const CourseLandingPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [showContactForm, setShowContactForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
   const sliderRef = useRef(null);
   const touchStartX = useRef(null);
 
@@ -314,48 +306,6 @@ const CourseLandingPage = () => {
     window.location.href = url;
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
-
- const mappedData = {
-    name: formData.name,
-    phone: formData.phone,
-    email: formData.email,
-    subject: formData.subject,
-    message: formData.message,
-  };
-
-  try {
-    const res = await fetch(`${API_BASE}/enquiry/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(mappedData),
-    });
-
-    const data = await res.json();
-
-    if (res.ok) {
-      alert("✅ " + data.message);
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      setShowContactForm(false);
-    } else {
-      alert("❌ " + (data.message || "Failed to submit form"));
-    }
-  } catch (error) {
-    console.error("Error submitting contact form:", error);
-    alert("⚠️ Cannot submit form. Backend not reachable.");
-  }
-};
-
-  const handleInputChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
   return (
     <>
       {/* Slider Section */}
@@ -499,113 +449,6 @@ const CourseLandingPage = () => {
             />
           </div>
         </div>
-
-        {/* Contact Sidebar */}
-        <div
-          className={styles.contactSidebar}
-          role="navigation"
-          aria-label="Quick contact"
-        >
-          <div
-            className={styles.sidebarItem}
-            onMouseEnter={() => setShowContactForm(true)}
-            onClick={() => setShowContactForm(true)}
-            tabIndex={0}
-            onKeyDown={(e) =>
-              e.key === "Enter" ? setShowContactForm(true) : null
-            }
-          >
-            <span className={styles.sidebarIcon}>📧</span>
-            <span className={styles.sidebarText}>Contact Us</span>
-          </div>
-          <a
-            href="https://wa.me/918888848588"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.sidebarItem}
-          >
-            <span className={styles.sidebarIcon}>💬</span>
-            <span className={styles.sidebarText}>WhatsApp</span>
-          </a>
-        </div>
-
-        {/* Contact Form Modal */}
-        {showContactForm && (
-          <div
-            className={styles.contactFormOverlay}
-            onClick={() => setShowContactForm(false)}
-            role="dialog"
-            aria-modal="true"
-          >
-            <div
-              className={styles.contactFormModal}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                className={styles.closeButton}
-                onClick={() => setShowContactForm(false)}
-                aria-label="Close contact form"
-              >
-                <X size={20} />
-              </button>
-              <h3 className={styles.formTitle}>Contact Form</h3>
-             <form className={styles.contactForm} onSubmit={handleSubmit}>
-  <input
-    type="text"
-    name="name"
-    placeholder="Name*"
-    className={styles.formInput}
-    value={formData.name}
-    onChange={handleInputChange}
-    required
-  />
-
-  <input
-    type="tel"
-    name="phone"
-    placeholder="Phone*"
-    className={styles.formInput}
-    value={formData.phone}
-    onChange={handleInputChange}
-    required
-  />
-
-  <input
-    type="email"
-    name="email"
-    placeholder="Email*"
-    className={styles.formInput}
-    value={formData.email}
-    onChange={handleInputChange}
-    required
-  />
-
-  <input
-    type="text"
-    name="subject"
-    placeholder="Subject*"
-    className={styles.formInput}
-    value={formData.subject}
-    onChange={handleInputChange}
-    required
-  />
-
-  <textarea
-    name="message"
-    placeholder="Message*"
-    className={styles.formTextarea}
-    rows={4}
-    value={formData.message}
-    onChange={handleInputChange}
-    required
-  />
-
-  <button type="submit" className={styles.formSubmit}>Submit</button>
-</form>
-
-            </div>
-          </div>
-        )}
 
         {/* Chat Widget */}
         <a
