@@ -199,6 +199,12 @@ const CourseLandingPage = () => {
           color: "#F57C00",
           url: "/courses/iot-solutions",
         },
+         {
+          name: "BLOCKCHAIN ",
+          icon: "⛓️",
+          color: "#3C3C3D",
+          url: "/courses/blockchain",
+        },
       ],
     },
   ];
