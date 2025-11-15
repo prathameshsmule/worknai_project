@@ -62,6 +62,12 @@ const CourseLandingPage = () => {
           color: "#3776AB",
           url: "/courses/python-fullstack",
         },
+         {
+          name: "MEAN FULL STACK DEVELOPER",
+          icon: "⚛️",
+          color: "#61DAFB",
+          url: "/courses/mern-fullstack",
+        },
         {
           name: "DATA ANALYST",
           icon: "📈",
@@ -127,6 +133,12 @@ const CourseLandingPage = () => {
           icon: "📋",
           color: "#0052CC",
           url: "/courses/sap-mm",
+        },
+          {
+          name: "SAP ACCOUNTING & CONTROLLING",
+          icon: "💼",
+          color: "#0052CC",
+          url: "/courses/sap-fico",
         },
       ],
     },
