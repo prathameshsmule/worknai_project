@@ -317,7 +317,7 @@ const CourseLandingPage = () => {
  const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const mappedData = {
+ const mappedData = {
     name: formData.name,
     phone: formData.phone,
     email: formData.email,
@@ -549,53 +549,63 @@ const CourseLandingPage = () => {
                 <X size={20} />
               </button>
               <h3 className={styles.formTitle}>Contact Form</h3>
-              <form className={styles.contactForm} onSubmit={handleSubmit}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  className={styles.formInput}
-                  value={formData.name}
-                  onChange={handleInputChange}
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone*"
-                  className={styles.formInput}
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email*"
-                  className={styles.formInput}
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                />
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  className={styles.formInput}
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                />
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  className={styles.formTextarea}
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                />
-                <button type="submit" className={styles.formSubmit}>
-                  Submit
-                </button>
-              </form>
+             <form className={styles.contactForm} onSubmit={handleSubmit}>
+  <input
+    type="text"
+    name="name"
+    placeholder="Name*"
+    className={styles.formInput}
+    value={formData.name}
+    onChange={handleInputChange}
+    required
+    autoComplete="name"
+  />
+
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone*"
+    className={styles.formInput}
+    value={formData.phone}
+    onChange={handleInputChange}
+    required
+    autoComplete="tel"
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Email*"
+    className={styles.formInput}
+    value={formData.email}
+    onChange={handleInputChange}
+    required
+    autoComplete="email"
+  />
+
+  <input
+    type="text"
+    name="subject"
+    placeholder="Subject*"
+    className={styles.formInput}
+    value={formData.subject}
+    onChange={handleInputChange}
+    required
+  />
+
+  <textarea
+    name="message"
+    placeholder="Message*"
+    className={styles.formTextarea}
+    rows={4}
+    value={formData.message}
+    onChange={handleInputChange}
+    required
+  />
+
+  <button type="submit" className={styles.formSubmit}>Submit</button>
+</form>
+
             </div>
           </div>
         )}
