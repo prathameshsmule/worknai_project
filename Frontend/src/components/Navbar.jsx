@@ -21,21 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Contact Bar */}
-      <div className="top-bar">
-        <div className="container topbar-flex">
-          <div className="top-left">
-            <a href="worknai009@gmail.com" className="contact-link">
-              worknai009@gmail.com
-            </a>
-            <a href="tel:+919923400442" className="contact-link">
-              +91 9923400442
-            </a>
-          </div>
-
-          
-        </div>
-      </div>
+     
 
       {/* Main Navbar */}
       <nav className="navbar">
