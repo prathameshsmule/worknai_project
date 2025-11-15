@@ -50,8 +50,32 @@ const Footer = () => {
                   className={styles.companyLogo}
                 />
                 <div className={styles.logoText}>
-                  <span className={styles.logoworknai}>WORKNAI</span>
-                  <span className={styles.logoSoftech}>Technologies</span>
+                <span
+  className={styles.logoworknai}
+  style={{
+    fontWeight: "800",
+    background: "linear-gradient(135deg, #ff3fbf 0%, #3f7bff 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    letterSpacing: "0.6px",
+  }}
+>
+  WORKNAI
+</span>
+
+<span
+  className={styles.logoSoftech}
+  style={{
+    fontWeight: "800",
+    background: "linear-gradient(135deg, #ff3fbf 0%, #3f7bff 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    letterSpacing: "0.6px",
+  }}
+>
+  Technologies
+</span>
+
                 </div>
               </div>
             </div>
