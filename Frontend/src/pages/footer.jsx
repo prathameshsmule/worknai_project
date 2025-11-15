@@ -60,7 +60,7 @@ const Footer = () => {
     letterSpacing: "0.6px",
   }}
 >
-  WORKNAI
+  WorknAi
 </span>
 
 <span
