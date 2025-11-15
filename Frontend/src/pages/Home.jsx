@@ -450,7 +450,7 @@ const CourseLandingPage = () => {
           </div>
         </div>
 
-        {/* Chat Widget */}
+        {/* फक्त WhatsApp chat widget ठेवला आहे */}
         <a
           href="https://wa.me/918888848588"
           target="_blank"
