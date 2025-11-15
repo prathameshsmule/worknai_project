@@ -54,7 +54,7 @@ const Footer = () => {
   className={styles.logoworknai}
   style={{
     fontWeight: "800",
-    margin-top:"5px",
+    marginTop: "5px",
     background: "linear-gradient(135deg, #ff3fbf 0%, #3f7bff 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
@@ -76,6 +76,7 @@ const Footer = () => {
 >
   Technologies
 </span>
+
 
                 </div>
               </div>
