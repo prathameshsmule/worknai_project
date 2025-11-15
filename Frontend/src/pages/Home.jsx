@@ -519,7 +519,7 @@ const CourseLandingPage = () => {
             <span className={styles.sidebarText}>Contact Us</span>
           </div>
           <a
-            href="https://wa.me/918888848588"
+            href="https://wa.me/919923400442"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.sidebarItem}
