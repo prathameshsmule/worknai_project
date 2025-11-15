@@ -1,7 +1,7 @@
 // src/pages/AdminLogin.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_BASE } from "../config/api.jsx";
+import { API_BASE } from "../components/api.jsx";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
