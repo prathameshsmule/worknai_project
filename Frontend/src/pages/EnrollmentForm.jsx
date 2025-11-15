@@ -24,17 +24,19 @@ const EnrollmentForm = () => {
     });
   };
 
-  // ✅ UPDATED handleSubmit
+  // ✅ FIXED handleSubmit for Create-React-App
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-     const res = await fetch(`${import.meta.env.VITE_APP_API_URL}/api/enquiry`, {
-
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}/enquiry`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await res.json();
 
@@ -53,7 +55,7 @@ const EnrollmentForm = () => {
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Something went wrong. Please try again.");
+      alert("⚠️ Something went wrong. Please try again.");
     }
   };
 
@@ -118,7 +120,6 @@ const EnrollmentForm = () => {
       <form style={formStyle} onSubmit={handleSubmit}>
         <h2 style={headingStyle}>Student Enrollment Form</h2>
 
-        {/* Name */}
         <label style={labelStyle}>Full Name</label>
         <input
           type="text"
@@ -130,7 +131,6 @@ const EnrollmentForm = () => {
           style={inputStyle}
         />
 
-        {/* Email */}
         <label style={labelStyle}>Email Address</label>
         <input
           type="email"
@@ -142,7 +142,6 @@ const EnrollmentForm = () => {
           style={inputStyle}
         />
 
-        {/* Phone */}
         <label style={labelStyle}>Phone Number</label>
         <input
           type="tel"
@@ -154,7 +153,6 @@ const EnrollmentForm = () => {
           style={inputStyle}
         />
 
-        {/* Course */}
         <label style={labelStyle}>Select Course</label>
         <select
           name="course"
@@ -171,7 +169,6 @@ const EnrollmentForm = () => {
           ))}
         </select>
 
-        {/* Address */}
         <label style={labelStyle}>Address</label>
         <textarea
           name="address"
@@ -183,7 +180,6 @@ const EnrollmentForm = () => {
           style={{ ...inputStyle, resize: "none" }}
         ></textarea>
 
-        {/* Submit Button */}
         <button
           type="submit"
           style={isHovered ? buttonHoverStyle : buttonStyle}
