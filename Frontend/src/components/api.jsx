@@ -3,4 +3,4 @@
 export const API_BASE =
   import.meta.env.VITE_API_URL ||
   // fallback to your server IP (use only for local/dev if you haven't set VITE_API_URL)
-  "http://89.116.32.49:5000/api";
+  "http://72.61.173.161:5000/api";
