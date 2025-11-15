@@ -84,12 +84,13 @@ export const createContactEnquiry = async (req, res) => {
 export const listEnquiries = async (_req, res) => {
   try {
     const enquiries = await Enquiry.find().sort({ createdAt: -1 });
-    res.json({ items: enquiries });
+    res.json(enquiries);   // VERY IMPORTANT — return array
   } catch (err) {
     console.error("❌ Error fetching enquiries:", err);
     res.status(500).json({ message: "Server error", error: err.message });
   }
 };
+
 
 /**
  * 🔐 Admin: Update enquiry
