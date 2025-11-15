@@ -1,0 +1,1080 @@
+/* CompanyPage.module.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.companyPage {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Section 1 - Our Approach */
+.approachSection {
+  min-height: 60vh;
+  background: linear-gradient(135deg, 
+    rgba(255, 240, 245, 0.4) 0%,
+    rgba(240, 230, 255, 0.4) 25%,
+    rgba(240, 248, 255, 0.4) 50%,
+    rgba(230, 255, 250, 0.4) 75%,
+    rgba(245, 240, 255, 0.4) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.tagline {
+  background: white;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.approachContent {
+  text-align: center;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 50px 60px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+}
+
+.approachTitle {
+  font-size: 72px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  50% {
+    background: linear-gradient(135deg, #f093fb 0%, #667eea 50%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.approachDescription {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4a5568;
+  font-weight: 400;
+}
+
+/* Section 2 - Team Image */
+.teamSection {
+  width: 100%;
+  background: linear-gradient(to right, 
+    rgba(255, 230, 255, 0.3),
+    rgba(230, 240, 255, 0.3),
+    rgba(230, 255, 250, 0.3),
+    rgba(255, 240, 255, 0.3));
+  padding: 0;
+}
+
+.teamImageContainer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.teamImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.teamImage:hover {
+  transform: scale(1.02);
+}
+
+/* Section 3 - Services */
+.servicesSection {
+  padding: 100px 20px;
+  background: white;
+}
+
+.servicesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.servicesIllustration {
+  width: 100%;
+  max-width: 500px;
+  animation: fadeInLeft 1s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.devIllustration {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.servicesContent {
+  padding: 20px 0;
+  animation: fadeInRight 1s ease-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.servicesBadge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #5b7cff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.servicesTitle {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.servicesDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* Contact Buttons */
+.contactButtons {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 1000;
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%) translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+.contactBtn {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  border-radius: 0;
+}
+
+.contactBtn:hover {
+  transform: translateX(-5px);
+}
+
+.contactUs {
+  background: #7c3aed;
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 20px 15px;
+  letter-spacing: 2px;
+}
+
+.contactUs:hover {
+  background: #6d28d9;
+}
+
+.whatsapp {
+  background: #25d366;
+  color: white;
+  padding: 18px;
+  font-size: 22px;
+}
+
+.whatsapp:hover {
+  background: #20ba5a;
+}
+
+.phone {
+  background: #ef4444;
+  color: white;
+  padding: 18px;
+  font-size: 20px;
+}
+
+.phone:hover {
+  background: #dc2626;
+}
+
+/* Chat Button */
+.chatBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.chatBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(139, 92, 246, 0.5);
+}
+
+.chatBtn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .servicesContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .servicesIllustration {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .approachTitle {
+    font-size: 48px;
+  }
+
+  .servicesTitle {
+    font-size: 32px;
+  }
+
+  .approachContent {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .approachTitle {
+    font-size: 36px;
+  }
+
+  .approachContent {
+    padding: 30px 20px;
+  }
+
+  .servicesTitle {
+    font-size: 28px;
+  }
+
+  .servicesDescription {
+    font-size: 15px;
+  }
+
+  .tagline {
+    font-size: 13px;
+    padding: 10px 24px;
+  }
+
+  .contactButtons {
+    right: 0;
+  }
+
+  .chatBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+.coreAppSection {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.coreAppSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(99, 102, 241, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.coreAppContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr 0.4fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.coreAppContent {
+  padding-right: 20px;
+}
+
+.coreAppTitle {
+  font-size: 72px;
+  font-weight: 800;
+  color: white;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.coreAppDescription {
+  color: white;
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.coreAppDescription p {
+  margin: 0;
+}
+
+.coreAppContactBtn {
+  background: white;
+  color: #6366f1;
+  border: none;
+  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.coreAppContactBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  background: #f8f9fa;
+}
+
+.coreAppContactBtn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .coreAppContainer {
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+  }
+  
+  .coreAppContactBtn {
+    grid-column: 2;
+    justify-self: start;
+  }
+  
+  .coreAppTitle {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coreAppSection {
+    padding: 60px 20px;
+  }
+  
+  .coreAppContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .coreAppTitle {
+    font-size: 48px;
+  }
+  
+  .coreAppDescription {
+    font-size: 16px;
+  }
+  
+  .coreAppContactBtn {
+    grid-column: 1;
+    justify-self: center;
+    width: fit-content;
+  }
+  
+  .coreAppContent {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .coreAppTitle {
+    font-size: 40px;
+  }
+  
+  .coreAppDescription {
+    font-size: 15px;
+  }
+  
+  .coreAppContactBtn {
+    padding: 16px 32px;
+    font-size: 15px;
+  }
+}
+
+/* Section 5 - Mobile Application Development */
+.mobileAppSection {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.mobileAppContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mobileAppIllustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileIllustration {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+}
+
+.mobileAppContent {
+  padding: 20px;
+}
+
+.mobileAppTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.mobileAppDescription {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  margin-bottom: 20px;
+}
+/* Contact Form Modal */
+.contactFormOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.contactFormModal {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #F5F7FA;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.closeButton:hover {
+  background: #E0E0E0;
+  transform: rotate(90deg);
+}
+
+.formTitle {
+  color: #667EEA;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: #667EEA;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formSubmit {
+  background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.formSubmit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Chat Widget */
+.chatWidget {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  z-index: 1000;
+  animation: pulse 2s infinite;
+  text-decoration: none;
+}
+
+.chatWidget:hover {
+  transform: scale(1.1);
+}
+
+.chatIcon {
+  font-size: 28px;
+}
+/* Section 5 - Mobile Application Development */
+.mobileAppSection {
+  padding: 100px 20px;
+  background: #f8f9fa;
+}
+
+.mobileAppContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mobileAppIllustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileAppImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.mobileAppContent {
+  padding: 20px;
+  animation: fadeInRight 1s ease-out;
+}
+
+.mobileAppTitle {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.mobileAppDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* Responsive for Mobile App Section */
+@media (max-width: 968px) {
+  .mobileAppContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .mobileAppIllustration {
+    order: -1;
+  }
+
+  .mobileAppImage {
+    max-width: 400px;
+  }
+
+  .mobileAppTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobileAppSection {
+    padding: 60px 20px;
+  }
+
+  .mobileAppTitle {
+    font-size: 28px;
+  }
+
+  .mobileAppDescription {
+    font-size: 15px;
+  }
+
+  .mobileAppImage {
+    max-width: 300px;
+  }
+}
+
+/* Section 5 - Mobile Application Development */
+.mobileAppSection {
+  padding: 100px 20px;
+  background: #f8f9fa;
+}
+
+.mobileAppContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mobileAppIllustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileAppImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.mobileAppContent {
+  padding: 20px;
+  animation: fadeInRight 1s ease-out;
+}
+
+.mobileAppTitle {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.mobileAppDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* Responsive for Mobile App Section */
+@media (max-width: 968px) {
+  .mobileAppContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .mobileAppIllustration {
+    order: -1;
+  }
+
+  .mobileAppImage {
+    max-width: 400px;
+  }
+
+  .mobileAppTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobileAppSection {
+    padding: 60px 20px;
+  }
+
+  .mobileAppTitle {
+    font-size: 28px;
+  }
+
+  .mobileAppDescription {
+    font-size: 15px;
+  }
+
+  .mobileAppImage {
+    max-width: 300px;
+  }
+}
+
+/* Section 6 - Technologies We Use */
+.technologiesSection {
+  padding: 100px 20px;
+  background: white;
+}
+
+.technologiesTitle {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 60px;
+}
+
+.technologiesGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.techCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.techCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.techIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.techCardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.techCardText {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Section 7 - Our Students are Working at */
+.studentsSection {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.studentsTitle {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 60px;
+}
+
+.workingText {
+  color: #9ca3af;
+  position: relative;
+}
+
+.workingText::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #ef4444;
+  border-radius: 2px;
+}
+
+.companiesGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.companyLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.companyLogo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.companyLogo img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive for Technologies Section */
+@media (max-width: 1024px) {
+  .technologiesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .technologiesTitle {
+    font-size: 36px;
+  }
+
+  .technologiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .techCard {
+    padding: 30px 20px;
+  }
+
+  .studentsTitle {
+    font-size: 36px;
+  }
+
+  .companiesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .technologiesSection {
+    padding: 60px 20px;
+  }
+
+  .technologiesTitle {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .technologiesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .studentsSection {
+    padding: 60px 20px;
+  }
+
+  .studentsTitle {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .companiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}

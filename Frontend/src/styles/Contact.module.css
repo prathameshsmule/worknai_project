@@ -1,0 +1,120 @@
+.contactContainer {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e9d5f5 0%, #f0e5f8 100%);
+  padding: 60px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contactBtn {
+  background-color: rgba(200, 150, 230, 0.4);
+  color: #a855f7;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  background-color: rgba(200, 150, 230, 0.6);
+  transform: translateY(-2px);
+}
+
+.companyName {
+  font-size: 64px;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.tagline {
+  font-size: 64px;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.contactCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.iconContainer {
+  margin-bottom: 25px;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.cardText {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+  .companyName,
+  .tagline {
+    font-size: 48px;
+  }
+  
+  .contactCards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .companyName,
+  .tagline {
+    font-size: 36px;
+  }
+  
+  .contactCards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card {
+    padding: 40px 30px;
+  }
+  
+  .contactHeader {
+    margin-bottom: 50px;
+  }
+}

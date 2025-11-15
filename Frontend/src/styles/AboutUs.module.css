@@ -1,0 +1,468 @@
+.aboutUsContainer {
+  width: 100%;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  
+  .content {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+  
+  .content {
+    padding: 0 20px;
+  }
+  
+  .heroSection {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .content {
+    padding: 0 15px;
+  }
+  
+  .heroSection {
+    min-height: 400px;
+  }
+}
+
+/* Main Section */
+.mainSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 100px auto;
+  padding: 0 40px;
+  align-items: center;
+}
+
+/* Image Grid */
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  height: 600px;
+}
+
+.imageItem1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imageItem2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imageItem3 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imageGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Content */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f97316;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sectionHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.sectionDescription {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.boldText {
+  font-weight: 700;
+  color: #475569;
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.featureItem {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: #eff6ff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+}
+
+.featureContent {
+  flex: 1;
+}
+
+.featureTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.featureText {
+  font-size: 0.9375rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design for Main Section */
+@media (max-width: 1200px) {
+  .mainSection {
+    gap: 60px;
+    margin: 80px auto;
+  }
+  
+  .sectionHeading {
+    font-size: 2.25rem;
+  }
+  
+  .imageGrid {
+    height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainSection {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin: 60px auto;
+  }
+  
+  .sectionHeading {
+    font-size: 2rem;
+  }
+  
+  .imageGrid {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainSection {
+    padding: 0 30px;
+    margin: 50px auto;
+    gap: 50px;
+  }
+  
+  .sectionHeading {
+    font-size: 1.75rem;
+  }
+  
+  .imageGrid {
+    height: 400px;
+    gap: 15px;
+  }
+  
+  .features {
+    gap: 28px;
+  }
+  
+  .featureItem {
+    gap: 16px;
+  }
+  
+  .iconWrapper {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainSection {
+    padding: 0 20px;
+    margin: 40px auto;
+    gap: 40px;
+  }
+  
+  .sectionHeading {
+    font-size: 1.5rem;
+  }
+  
+  .imageGrid {
+    height: 350px;
+    gap: 10px;
+  }
+  
+  .sectionDescription {
+    font-size: 0.9375rem;
+  }
+  
+  .features {
+    gap: 24px;
+  }
+  
+  .featureTitle {
+    font-size: 1rem;
+  }
+  
+  .featureText {
+    font-size: 0.875rem;
+  }
+  
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Progress Section */
+.progressSection {
+  background-color: #f8fafc;
+  padding: 100px 40px;
+}
+
+.progressContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.progressHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.progressLabel {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #a855f7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #faf5ff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.progressHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 16px 0 0 0;
+}
+
+.progressBars {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.progressItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.progressPercentage {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.progressBarWrapper {
+  width: 100%;
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Responsive Design for Progress Section */
+@media (max-width: 992px) {
+  .progressSection {
+    padding: 80px 30px;
+  }
+  
+  .progressHeading {
+    font-size: 2.25rem;
+  }
+  
+  .progressHeader {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .progressSection {
+    padding: 60px 30px;
+  }
+  
+  .progressHeading {
+    font-size: 2rem;
+  }
+  
+  .progressHeader {
+    margin-bottom: 40px;
+  }
+  
+  .progressBars {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .progressSection {
+    padding: 50px 20px;
+  }
+  
+  .progressHeading {
+    font-size: 1.75rem;
+  }
+  
+  .progressLabel {
+    font-size: 0.8125rem;
+    padding: 6px 16px;
+  }
+  
+  .progressBars {
+    gap: 24px;
+  }
+  
+  .progressTitle {
+    font-size: 0.9375rem;
+  }
+  
+  .progressPercentage {
+    font-size: 0.8125rem;
+  }
+}

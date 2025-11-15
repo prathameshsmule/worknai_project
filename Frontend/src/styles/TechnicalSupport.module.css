@@ -1,0 +1,746 @@
+/* TechnicalSupport.module.css */
+
+.technicalSupportContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+  padding: 60px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left Section */
+.leftSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.supportImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.overlayImage {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.techIconContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrenchIcon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.glowEffect {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Right Section */
+.rightSection {
+  padding: 20px;
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #e8d4ff 0%, #f0e4ff 100%);
+  color: #8b5cf6;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.mainHeading {
+  font-size: 58px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  text-decoration: underline;
+  text-decoration-color: #1a1a2e;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
+.subHeading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 50px;
+  line-height: 1.3;
+}
+
+/* Accordion Styles */
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordionItem {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.accordionItem:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.accordionHeader:hover {
+  background: #f8f9fa;
+}
+
+.accordionHeader.active {
+  background: #f8f9fa;
+}
+
+.accordionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.accordionIcon {
+  font-size: 28px;
+  font-weight: 300;
+  color: #1a1a2e;
+  transition: transform 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordionContent {
+  padding: 0 30px 24px 30px;
+  color: #4a5568;
+  font-size: 15px;
+  line-height: 1.7;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contentWrapper {
+    gap: 60px;
+  }
+
+  .overlayImage {
+    width: 350px;
+    height: 350px;
+    bottom: -40px;
+    right: -40px;
+  }
+
+  .mainHeading {
+    font-size: 48px;
+  }
+
+  .subHeading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 968px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .leftSection {
+    justify-content: center;
+  }
+
+  .overlayImage {
+    bottom: -30px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .mainHeading {
+    font-size: 42px;
+  }
+
+  .subHeading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .technicalSupportContainer {
+    padding: 40px 15px;
+  }
+
+  .supportImage {
+    max-width: 100%;
+  }
+
+  .overlayImage {
+    width: 280px;
+    height: 280px;
+    bottom: -20px;
+  }
+
+  .techIconContainer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .mainHeading {
+    font-size: 36px;
+  }
+
+  .subHeading {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .accordionTitle {
+    font-size: 16px;
+  }
+
+  .accordionHeader {
+    padding: 20px 20px;
+  }
+
+  .accordionContent {
+    padding: 0 20px 20px 20px;
+    font-size: 14px;
+  }
+}
+/* TechnicalSupport.module.css */
+
+.technicalSupportContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+  padding: 60px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left Section */
+.leftSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.supportImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.overlayImage {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.techIconContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrenchIcon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.glowEffect {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Right Section */
+.rightSection {
+  padding: 20px;
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #e8d4ff 0%, #f0e4ff 100%);
+  color: #8b5cf6;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.mainHeading {
+  font-size: 58px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  text-decoration: underline;
+  text-decoration-color: #1a1a2e;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
+.subHeading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 50px;
+  line-height: 1.3;
+}
+
+/* Accordion Styles */
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.accordionItem {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.accordionItem:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.accordionHeader:hover {
+  background: #f8f9fa;
+}
+
+.accordionHeader.active {
+  background: #f8f9fa;
+}
+
+.accordionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.accordionIcon {
+  font-size: 28px;
+  font-weight: 300;
+  color: #1a1a2e;
+  transition: transform 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordionContent {
+  padding: 0 30px 24px 30px;
+  color: #4a5568;
+  font-size: 15px;
+  line-height: 1.7;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Support Process Section */
+.supportProcessSection {
+  max-width: 1400px;
+  margin: 100px auto 0;
+  background: white;
+  border-radius: 20px;
+  padding: 60px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.supportProcessContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.supportProcessLeft {
+  padding-right: 40px;
+}
+
+.supportProcessBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffe4f0 0%, #fff0f5 100%);
+  color: #e91e63;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.supportProcessHeading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.supportProcessList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.supportProcessList li {
+  color: #718096;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.supportProcessList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #718096;
+  font-size: 20px;
+}
+
+.faqSection {
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faqHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  cursor: pointer;
+}
+
+.faqQuestion {
+  font-size: 17px;
+  font-weight: 600;
+  color: #4299e1;
+}
+
+.faqIcon {
+  font-size: 24px;
+  font-weight: 300;
+  color: #2d3748;
+}
+
+.faqAnswer {
+  padding: 0 25px 20px 25px;
+  color: #718096;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.supportProcessRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.supportTeamImage {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contentWrapper {
+    gap: 60px;
+  }
+
+  .overlayImage {
+    width: 350px;
+    height: 350px;
+    bottom: -40px;
+    right: -40px;
+  }
+
+  .mainHeading {
+    font-size: 48px;
+  }
+
+  .subHeading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 968px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .leftSection {
+    justify-content: center;
+  }
+
+  .overlayImage {
+    bottom: -30px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .mainHeading {
+    font-size: 42px;
+  }
+
+  .subHeading {
+    font-size: 32px;
+  }
+
+  .supportProcessSection {
+    padding: 40px 30px;
+    margin-top: 60px;
+  }
+
+  .supportProcessContent {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .supportProcessLeft {
+    padding-right: 0;
+  }
+
+  .supportProcessHeading {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .technicalSupportContainer {
+    padding: 40px 15px;
+  }
+
+  .supportImage {
+    max-width: 100%;
+  }
+
+  .overlayImage {
+    width: 280px;
+    height: 280px;
+    bottom: -20px;
+  }
+
+  .techIconContainer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .mainHeading {
+    font-size: 36px;
+  }
+
+  .subHeading {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .accordionTitle {
+    font-size: 16px;
+  }
+
+  .accordionHeader {
+    padding: 20px 20px;
+  }
+
+  .accordionContent {
+    padding: 0 20px 20px 20px;
+    font-size: 14px;
+  }
+
+  .supportProcessSection {
+    padding: 30px 20px;
+    margin-top: 40px;
+  }
+
+  .supportProcessHeading {
+    font-size: 20px;
+  }
+
+  .supportProcessList li {
+    font-size: 14px;
+  }
+
+  .faqQuestion {
+    font-size: 15px;
+  }
+
+  .faqAnswer {
+    font-size: 14px;
+  }
+
+  .supportTeamImage {
+    max-width: 100%;
+  }
+}

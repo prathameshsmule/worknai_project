@@ -1,0 +1,632 @@
+/* ==================== RESET & GLOBAL ==================== */
+/* ==================== OFFLINE MENU STYLES ==================== */
+.offline-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  margin-top: 8px;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.offline-menu a,
+.offline-option span {
+  display: block;
+  padding: 10px 20px;
+  color: #5a6c7d;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.offline-menu a:hover,
+.offline-option span:hover {
+  background: #f8f9fa;
+  color: #e74c3c;
+}
+
+.sub-dropdown {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  min-width: 180px;
+  padding: 8px 0;
+}
+
+.sub-dropdown a {
+  padding: 8px 18px;
+  font-size: 13px;
+  color: #5a6c7d;
+}
+
+.sub-dropdown a:hover {
+  background: #f2f3f5;
+  color: #e74c3c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== TOP CONTACT BAR ==================== */
+.top-bar {
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+.topbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 13px;
+}
+
+.contact-link:hover {
+  color: #3498db;
+}
+
+.top-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-icon {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #3498db;
+}
+
+/* ==================== MAIN NAVBAR ==================== */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* ==================== LOGO ==================== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  margin-right: -30px;
+}
+
+.logo-img-wrap {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e74c3c;
+  letter-spacing: 0.5px;
+}
+
+.logo-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+/* ==================== NAVIGATION LINKS ==================== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+  align-items: center;
+  margin: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links > li > a {
+  color: #5a6c7d;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  display: block;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links > li > a:hover {
+  color: #e74c3c;
+}
+
+/* ==================== DROPDOWN ==================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #5a6c7d;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.dropdown-toggle::after {
+  content: '▼';
+  font-size: 10px;
+  margin-left: 4px;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-toggle:hover {
+  color: #e74c3c;
+}
+
+/* ==================== MEGA MENU (COURSES DROPDOWN) ==================== */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 28px 32px;
+  margin-top: 8px;
+  width: 1100px;
+  z-index: 100;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.mega-menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 100px;
+}
+
+.mega-menu-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ff69b4;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.mega-menu-column a,
+.course-link {
+  color: #7a8a9a;
+  text-decoration: none;
+  font-size: 13.5px;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s, padding-left 0.3s;
+  line-height: 1.4;
+}
+
+.mega-menu-column a:hover,
+.course-link:hover {
+  color: #2c3e50;
+  padding-left: 6px;
+}
+
+.badge-trending {
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+/* ==================== SIMPLE DROPDOWN (OTHERS) ==================== */
+.dropdown-menu:not(.mega-menu) {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  margin-top: 8px;
+  min-width: 180px;
+  z-index: 100;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu:not(.mega-menu) a {
+  color: #5a6c7d;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s, color 0.3s;
+}
+.mega-menu {
+  margin-left: 120px; /* Moves the courses dropdown right */
+}
+
+
+.dropdown-menu:not(.mega-menu) a:hover {
+  background: #f8f9fa;
+  color: #e74c3c;
+}
+
+/* ==================== RIGHT ACTIONS ==================== */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 20px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #5a6c7d;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.search-btn:hover {
+  color: #e74c3c;
+}
+
+.enroll-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.enroll-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #5a6c7d;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* ==================== MOBILE MENU ==================== */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.mobile-menu a {
+  padding: 14px 0;
+  color: #5a6c7d;
+  text-decoration: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mobile-menu a:hover {
+  color: #e74c3c;
+}
+
+.mobile-accordion {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile-accordion summary {
+  padding: 14px 0;
+  cursor: pointer;
+  color: #5a6c7d;
+  font-size: 15px;
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-accordion summary::after {
+  content: '+';
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.mobile-accordion[open] summary::after {
+  content: '−';
+}
+
+.mobile-accordion-panel {
+  padding: 12px 0 12px 20px;
+}
+
+.mobile-accordion-panel a {
+  padding: 10px 0;
+  border: none;
+  font-size: 14px;
+}
+
+.mobile-course-section {
+  margin: 16px 0;
+}
+
+.mobile-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ff69b4;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.enroll-btn-mobile {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #fff;
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 24px;
+  margin-top: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ==================== ANIMATIONS ==================== */
+.mega-menu,
+.dropdown-menu {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.dropdown-menu:not(.mega-menu) {
+  animation: fadeInSimple 0.2s ease-in-out;
+}
+
+@keyframes fadeInSimple {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ==================== FOCUS STATES ==================== */
+.dropdown-toggle:focus,
+.nav-links > li > a:focus,
+.search-btn:focus,
+.enroll-btn:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1300px) {
+  .nav-links > li > a,
+  .dropdown-toggle {
+    padding: 8px 8px;
+    font-size: 13px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .enroll-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links > li > a,
+  .dropdown-toggle {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .mega-menu {
+    width: 950px;
+  }
+
+  .mega-menu-grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .mega-menu {
+    width: calc(100vw - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-links > li > a,
+  .dropdown-toggle {
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .top-bar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-title {
+    font-size: 16px;
+  }
+
+  .logo-subtitle {
+    font-size: 12px;
+  }
+
+  .logo-img-wrap {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-content {
+    height: 60px;
+  }
+
+  .search-btn {
+    margin-left: 10px;
+    padding: 6px;
+  }
+
+  .search-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
