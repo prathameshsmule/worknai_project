@@ -39,18 +39,27 @@ const AdminDashboard = () => {
   const token = localStorage.getItem("adminToken");
 
   /* -------------------- Fetch Enquiries -------------------- */
- const fetchEnquiries = async () => {
+const fetchEnquiries = async () => {
   try {
     const res = await fetch(`${API_BASE}/enquiry/all`, {
       headers: token ? { Authorization: `Bearer ${token}` } : {},
     });
 
     const data = await res.json();
-    setEnquiries(data.items || data || []);
+
+    if (Array.isArray(data)) {
+      setEnquiries(data);
+    } else if (data.items) {
+      setEnquiries(data.items);
+    } else {
+      setEnquiries([]);
+    }
+
   } catch (err) {
     console.error("Error fetching enquiries:", err);
   }
 };
+
 
 
   /* -------------------- Fetch Admins -------------------- */
