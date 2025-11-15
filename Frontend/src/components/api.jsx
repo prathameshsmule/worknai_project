@@ -3,6 +3,8 @@
 // src/config/api.js
 
 // Use .env if defined, else fallback
+// src/config/api.js
+
 export const API_BASE =
   process.env.REACT_APP_API_URL ||
-  "http://api.worknai.online/api";
+  "https://worknai.online/api";
