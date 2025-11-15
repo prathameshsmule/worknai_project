@@ -171,19 +171,26 @@ body {
   line-height: 1.1;
 }
 
-.logo-title {
+/* .logo-title {
   font-size: 18px;
   font-weight: 700;
   color: #e74c3c;
   letter-spacing: 0.5px;
-}
+} */
 
-.logo-subtitle {
+/* .logo-subtitle {
   font-size: 14px;
   font-weight: 600;
   color: #2c3e50;
   letter-spacing: 0.5px;
+} */
+
+.logo-title, .logo-subtitle {
+  background: linear-gradient(135deg, #ff4fd8 0%, #4f8bff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 /* ==================== NAVIGATION LINKS ==================== */
 .nav-links {
