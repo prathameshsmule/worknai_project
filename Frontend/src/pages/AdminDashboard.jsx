@@ -42,19 +42,25 @@ const AdminDashboard = () => {
 const fetchEnquiries = async () => {
   try {
     const res = await fetch(`${API_BASE}/enquiry/all`, {
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
     });
+
+    if (!res.ok) {
+      console.error("Failed to fetch enquiries:", res.status);
+      setEnquiries([]);
+      return;
+    }
 
     const data = await res.json();
 
     if (Array.isArray(data)) {
       setEnquiries(data);
-    } else if (data.items) {
-      setEnquiries(data.items);
     } else {
       setEnquiries([]);
     }
-
   } catch (err) {
     console.error("Error fetching enquiries:", err);
   }
