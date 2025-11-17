@@ -272,37 +272,40 @@ const CourseLandingPage = () => {
   ];
 
   // Testimonials: gender-consistent avatarUrl for each name
-  const leftTestimonials = [
-    { quote: "The training was clear, concise, and easy to follow. Highly recommended!", name: "Priya M.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/15.jpg" },
-    { quote: "Real-world applications made learning effective and impactful.", name: "Vikram R.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/35.jpg" },
-    { quote: "Covered the latest industry trends–our team is ahead in tech!", name: "Anjali D.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/22.jpg" },
-    { quote: "Trainers were approachable and cleared all doubts effectively.", name: "Karthik P.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/42.jpg" },
-    { quote: "Boosted our team's productivity–high ROI!", name: "Suresh K.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/19.jpg" },
-    { quote: "Tailored to our needs, making training even more valuable.", name: "Meera J.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/31.jpg" },
+ // --- UPDATED TESTIMONIAL ARRAYS (Gender Correct Avatars) ---
 
-    // duplicates for continuous scroll effect (if required)
-    { quote: "The training was clear, concise, and easy to follow. Highly recommended!", name: "Priya M.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/16.jpg" },
-    { quote: "Real-world applications made learning effective and impactful.", name: "Vikram R.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/36.jpg" },
-    { quote: "Covered the latest industry trends–our team is ahead in tech!", name: "Anjali D.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/23.jpg" },
-    { quote: "Trainers were approachable and cleared all doubts effectively.", name: "Karthik P.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/43.jpg" },
-    { quote: "Boosted our team's productivity–high ROI!", name: "Suresh K.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/20.jpg" },
-    { quote: "Tailored to our needs, making training even more valuable.", name: "Meera J.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/32.jpg" },
-  ];
+const leftTestimonials = [
+  { quote: "The training was clear, concise, and easy to follow. Highly recommended!", name: "Priya M.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/15.jpg" },
+  { quote: "Real-world applications made learning effective and impactful.", name: "Vikram R.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/35.jpg" },
+  { quote: "Covered the latest industry trends–our team is ahead in tech!", name: "Anjali D.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/22.jpg" },
+  { quote: "Trainers were approachable and cleared all doubts effectively.", name: "Karthik P.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/42.jpg" },
+  { quote: "Boosted our team's productivity–high ROI!", name: "Suresh K.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/19.jpg" },
+  { quote: "Tailored to our needs, making training even more valuable.", name: "Meera J.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/31.jpg" },
 
-  const rightTestimonials = [
-    { quote: "Understood exactly what we needed and applied it to our real-world application.", name: "Rohan S.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/25.jpg" },
-    { quote: "Comprehensive training with a clear approach–helped our team immensely!", name: "Divya P.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/12.jpg" },
-    { quote: "The trainers were knowledgeable and always ready to help. Highly recommended!", name: "Vikas M.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/28.jpg" },
-    { quote: "Customized training that perfectly aligned with our business goals.", name: "Sanjay T.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/46.jpg" },
-    { quote: "Our employees are now more confident and skilled, thanks to NewGenSoftech!", name: "Megha S.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/29.jpg" },
+  // Extra for smooth scrolling
+  { quote: "Excellent hands-on sessions and project-based learning.", name: "Ritika S.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/41.jpg" },
+  { quote: "Practical examples we used immediately in production.", name: "Amit G.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/52.jpg" },
+  { quote: "Great mentors and fast learning curve for juniors.", name: "Neha P.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/48.jpg" },
+  { quote: "Content was well structured and very practical.", name: "Ravi M.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/58.jpg" },
+  { quote: "Support after course completion was amazing.", name: "Pooja K.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/54.jpg" },
+  { quote: "Improved my interview readiness and practical skills.", name: "Sachin L.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/60.jpg" },
+];
 
-    // duplicates for continuous scroll
-    { quote: "Understood exactly what we needed and applied it to our real-world application.", name: "Rohan S.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/26.jpg" },
-    { quote: "Comprehensive training with a clear approach–helped our team immensely!", name: "Divya P.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/13.jpg" },
-    { quote: "The trainers were knowledgeable and always ready to help. Highly recommended!", name: "Vikas M.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/29.jpg" },
-    { quote: "Customized training that perfectly aligned with our business goals.", name: "Sanjay T.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/47.jpg" },
-    { quote: "Our employees are now more confident and skilled, thanks to NewGenSoftech!", name: "Megha S.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/30.jpg" },
-  ];
+const rightTestimonials = [
+  { quote: "Understood what we needed and applied it well.", name: "Rohan S.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/25.jpg" },
+  { quote: "Comprehensive training with a clear approach.", name: "Divya P.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/12.jpg" },
+  { quote: "Trainers were knowledgeable and always ready to help.", name: "Vikas M.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/28.jpg" },
+  { quote: "Customized training aligned with business goals.", name: "Sanjay T.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/46.jpg" },
+  { quote: "Our team is now more confident and skilled!", name: "Megha S.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/29.jpg" },
+
+  // Extra for smooth scrolling
+  { quote: "Projects helped us build a product quickly.", name: "Manish R.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/33.jpg" },
+  { quote: "Excellent mentors and structured content.", name: "Shalini V.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/34.jpg" },
+  { quote: "Feedback improved our code quality a lot.", name: "Aditya K.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/37.jpg" },
+  { quote: "Perfect balance of theory & hands-on labs.", name: "Kavita R.", color: "linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)", avatarUrl: "https://randomuser.me/api/portraits/women/38.jpg" },
+  { quote: "Interview support was superb!", name: "Nitin S.", color: "linear-gradient(135deg, #8B5CF6 0%, #B794F6 100%)", avatarUrl: "https://randomuser.me/api/portraits/men/40.jpg" },
+];
+
 
   // Auto-advance
   useEffect(() => {
