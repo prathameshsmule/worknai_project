@@ -12,7 +12,7 @@ const centersData = {
           address:
             "Phase 1, Rajiv Gandhi Infotech Park, Hinjewadi, Pune, Maharashtra 411057",
           contact: "+91 9923400442",
-          email: "pune.hinjewadi@worknai.com",
+          email: "worknai009@gmail.com",
           courses: [
             "Artificial Intelligence (AI)",
             "Machine Learning (ML)",
@@ -25,8 +25,8 @@ const centersData = {
           id: "talawade",
           name: "Talawade Center",
           address: " Business Park, Talawade, Pune, Maharashtra 411062",
-          contact: "+91 9988776655",
-          email: "pune.talawade@worknai.com",
+          contact: "+91 9923400442",
+          email: "worknai009@gmail.com",
           courses: [
             "Artificial Intelligence (AI)",
             "Machine Learning (ML)",
@@ -40,8 +40,8 @@ const centersData = {
           name: "Bhumkar Chowk Center",
           address:
             "Near Wakad Flyover, Bhumkar Chowk, Pune, Maharashtra 411057",
-          contact: "+91 9876543210",
-          email: "pune.bhumkar@worknai.com",
+          contact: "+91 9923400442",
+          email: "worknai009@gmail.com",
           courses: [
             "Artificial Intelligence (AI)",
             "Machine Learning (ML)",
