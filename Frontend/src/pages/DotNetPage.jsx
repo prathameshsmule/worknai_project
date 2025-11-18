@@ -14,7 +14,7 @@ const DotNetLanding = () => {
             </div>
           </div>
           <div className={styles.logoText}>
-            <span className={styles.logoNewgen}>NEWGEN</span>
+            <span className={styles.logoNewgen}>WorknAi</span>
             <span className={styles.logoSoftech}>SOFTECH</span>
             <div className={styles.logoUnderline}></div>
           </div>
@@ -32,7 +32,7 @@ const DotNetLanding = () => {
 
             <div className={styles.websiteLink}>
               <div className={styles.globeIcon}>🌐</div>
-              <span>www.newgensoftech.com</span>
+              <span>www.worknai.online</span>
             </div>
           </div>
 
