@@ -258,36 +258,37 @@ const CompanyPage = () => {
       </section>
 
       {/* Section 5 - Mobile Application Development */}
-      <section className={styles.mobileAppSection}>
-        <div className={styles.mobileAppContainer}>
-          <div className={styles.mobileAppIllustration}>
-            <img
-              src="https://newgensoftech.com/wp-content/uploads/2025/02/app-development-3.png"
-              alt="Mobile Application Development"
-              className={styles.mobileAppImage}
-            />
-          </div>
+     <section className={styles.mobileAppSection}>
+  <div className={styles.mobileAppContainer}>
+    <div className={styles.mobileAppIllustration}>
+      <img
+        src="https://cdni.iconscout.com/illustration/premium/thumb/mobile-app-development-illustration-3980661-3295052.png"
+        alt="Mobile Application Development"
+        className={styles.mobileAppImage}
+      />
+    </div>
 
-          <div className={styles.mobileAppContent}>
-            <h2 className={styles.mobileAppTitle}>
-              Mobile Application Development
-            </h2>
-            <p className={styles.mobileAppDescription}>
-              Smartphones have transformed how businesses engage with customers.
-              Worknai Technologies has been at the forefront of mobile
-              technology, developing high-performance mobile applications that
-              enhance user experience and drive business growth.
-            </p>
-            <p className={styles.mobileAppDescription}>
-              Our team of mobile app developers creates feature-rich, scalable,
-              and intuitive applications tailored to your business
-              needs—ensuring a seamless digital experience for your customers.
-              Whether it's Android or iOS, we develop apps that increase
-              customer engagement and boost your ROI.
-            </p>
-          </div>
-        </div>
-      </section>
+    <div className={styles.mobileAppContent}>
+      <h2 className={styles.mobileAppTitle}>
+        Mobile Application Development
+      </h2>
+      <p className={styles.mobileAppDescription}>
+        Smartphones have transformed how businesses engage with customers.
+        Worknai Technologies has been at the forefront of mobile
+        technology, developing high-performance mobile applications that
+        enhance user experience and drive business growth.
+      </p>
+      <p className={styles.mobileAppDescription}>
+        Our team of mobile app developers creates feature-rich, scalable,
+        and intuitive applications tailored to your business needs—ensuring
+        a seamless digital experience for your customers. Whether it's
+        Android or iOS, we develop apps that increase customer engagement
+        and boost your ROI.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Section 6 - Technologies We Use */}
       <section className={styles.technologiesSection}>
