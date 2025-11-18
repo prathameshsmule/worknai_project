@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/CompanyPage.module.css";
 import walmartLogo from "../assets/walmart.png";
+import appImg from "../assets/banner1.jpg";
+
 
 const CompanyPage = () => {
   const [currentText, setCurrentText] = useState("Vision");
@@ -262,7 +264,7 @@ const CompanyPage = () => {
   <div className={styles.mobileAppContainer}>
     <div className={styles.mobileAppIllustration}>
       <img
-        src="https://cdni.iconscout.com/illustration/premium/thumb/mobile-app-development-illustration-3980661-3295052.png"
+       src={appImg} 
         alt="Mobile Application Development"
         className={styles.mobileAppImage}
       />
