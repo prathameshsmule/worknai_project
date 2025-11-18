@@ -7,14 +7,8 @@ const DotNetLanding = () => {
       <div className={styles.container}>
         {/* Logo */}
         <div className={styles.logo}>
-          <div className={styles.logoIcon}>
-            <div className={styles.logoCircle}>
-              <div className={styles.logoLeft}></div>
-              <div className={styles.logoRight}></div>
-            </div>
-          </div>
           <div className={styles.logoText}>
-         <span className={styles.logoSoftech}>WorknAi</span>
+         <span className={styles.logoSoftech}>WORKNAI</span>
             <span className={styles.logoSoftech}>SOFTECH</span>
             <div className={styles.logoUnderline}></div>
           </div>
