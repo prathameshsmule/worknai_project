@@ -15,7 +15,7 @@ const JavaDev = () => {
           </div>
           <div className={styles.logoText}>
             <span className={styles.logoNewgen}>WORKNAI</span>
-            <span className={styles.logoSoftech}>SOFTECH</span>
+            <span className={styles.logoSoftech}>TECHNOLOGIES</span>
             <div className={styles.logoUnderline}></div>
           </div>
         </div>
@@ -122,7 +122,7 @@ const JavaDev = () => {
             <div className={styles.infoItem}>
               <span className={styles.infoIcon}>📞</span>
               <span className={styles.infoLabel}>Contact</span>
-              <a href="tel:+919923400442" className={styles.infoValue}>9923400440</a>
+              <a href="tel:+919923400442" className={styles.infoValue}>9923400442</a>
             </div>
             <div className={styles.infoDivider}></div>
             <div className={styles.infoItem}>
