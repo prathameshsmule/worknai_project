@@ -32,7 +32,7 @@ const SqlDev = () => {
 
             <div className={styles.websiteLink}>
               <div className={styles.globeIcon}>🌐</div>
-              <span>www.worknai.com</span>
+              <span>www.worknai.online</span>
             </div>
           </div>
 
