@@ -156,65 +156,7 @@ const JavaDev = () => {
             </div>
           </div>
 
-          <div className={styles.learnRight}>
-            <h2 className={styles.learnTitle}>What you’ll learn</h2>
-            <p className={styles.learnSubtitle}>
-              Build Robust and Enterprise-Grade Full-Stack Applications with the Java Stack
-            </p>
-
-            <h3 className={styles.skillsTitle}>Skills you’ll gain</h3>
-
-            <div className={styles.skillsGrid}>
-              <div className={styles.skillsColumn}>
-                {[
-                  'Master end-to-end web development using Java, Spring Boot, and Angular/React',
-                  'Build responsive and dynamic single-page applications (SPAs)',
-                  'Apply OOP principles with Core Java',
-                  'Develop and consume RESTful APIs with Spring Boot',
-                  'Use Hibernate for ORM and seamless database interactions'
-                ].map((t, i) => (
-                  <div className={styles.skillItem} key={`j1-${i}`}>
-                    <span className={styles.checkIcon}>✓</span>
-                    <p className={styles.skillText}>{t}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className={styles.skillsColumn}>
-                {[
-                  'Manage relational data using MySQL or PostgreSQL',
-                  'Implement DI, data binding, and MVC architecture',
-                  'Handle authentication, authorization, and sessions',
-                  'Deploy full-stack apps on cloud platforms',
-                  'Build real-world projects with enterprise practices'
-                ].map((t, i) => (
-                  <div className={styles.skillItem} key={`j2-${i}`}>
-                    <span className={styles.checkIcon}>✓</span>
-                    <p className={styles.skillText}>{t}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <button className={styles.enrollNowButton} type="button">Enroll Now! →</button>
-          </div>
-        </div>
-      </section>
-
-      {/* Learn (.NET) – kept for reuse, now responsive */}
-      <section className={styles.learnSection}>
-        <div className={styles.learnContent}>
-          <div className={styles.learnLeft}>
-            <div className={styles.imageCard}>
-              <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
-                alt="Developer workspace"
-                className={styles.learnImage}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
+        
 
           <div className={styles.learnRight}>
             <h2 className={styles.learnTitle}>What you’ll learn</h2>
