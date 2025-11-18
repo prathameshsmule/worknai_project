@@ -15,7 +15,7 @@ const SapFico = () => {
           </div>
           <div className={styles.logoText}>
             <span className={styles.logoNewgen}>WORKNAI</span>
-            <span className={styles.logoSoftech}>SOFTECH</span>
+            <span className={styles.logoSoftech}>TECHNOLOGIES</span>
             <div className={styles.logoUnderline}></div>
           </div>
         </div>
@@ -32,7 +32,7 @@ const SapFico = () => {
 
             <div className={styles.websiteLink}>
               <div className={styles.globeIcon}>🌐</div>
-              <span>www.worknai.com</span>
+              <span>www.worknai.online</span>
             </div>
           </div>
 
