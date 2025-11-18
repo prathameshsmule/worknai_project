@@ -32,13 +32,13 @@ const JavaDev = () => {
 
             <a
               className={styles.websiteLink}
-              href="https://www.worknai.com"
+              href="https://www.worknai.online"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit worknai.com"
             >
               <div className={styles.globeIcon} aria-hidden="true">🌐</div>
-              <span>www.worknai.com</span>
+              <span>www.worknai.online</span>
             </a>
           </div>
 
