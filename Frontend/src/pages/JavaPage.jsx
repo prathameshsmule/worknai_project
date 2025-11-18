@@ -122,7 +122,7 @@ const JavaDev = () => {
             <div className={styles.infoItem}>
               <span className={styles.infoIcon}>📞</span>
               <span className={styles.infoLabel}>Contact</span>
-              <a href="tel:+919890446612" className={styles.infoValue}>9890446612</a>
+              <a href="tel:+919923400442" className={styles.infoValue}>9923400440</a>
             </div>
             <div className={styles.infoDivider}></div>
             <div className={styles.infoItem}>
@@ -130,7 +130,7 @@ const JavaDev = () => {
               <span className={styles.infoLabel}>WhatsApp</span>
               <a
                 className={styles.infoValueLink}
-                href="https://wa.me/919890446612"
+                href="https://wa.me/919923400442"
                 target="_blank"
                 rel="noopener noreferrer"
               >
