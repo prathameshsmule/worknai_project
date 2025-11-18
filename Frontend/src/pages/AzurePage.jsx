@@ -15,7 +15,7 @@ const AzurePage = () => {
           </div>
           <div className={styles.logoText}>
             <span className={styles.logoNewgen}>WORKNAI</span>
-            <span className={styles.logoSoftech}>SOFTECH</span>
+            <span className={styles.logoSoftech}>TECHNOLOGIES</span>
             <div className={styles.logoUnderline}></div>
           </div>
         </div>
