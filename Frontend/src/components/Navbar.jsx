@@ -332,7 +332,7 @@ const Navbar = () => {
                   <div className="dropdown-menu">
                     <Link to="/blog">Blog</Link>
                     <Link to="/JobPage">Job Openings</Link>
-                    <Link to="/enrollment">Enrollment Form</Link>
+                 
                   </div>
                 )}
               </li>
