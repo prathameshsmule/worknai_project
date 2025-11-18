@@ -14,7 +14,7 @@ const DotNetLanding = () => {
             </div>
           </div>
           <div className={styles.logoText}>
-            <span className={styles.logoNewgen}>WorknAi</span>
+         
             <span className={styles.logoSoftech}>SOFTECH</span>
             <div className={styles.logoUnderline}></div>
           </div>
