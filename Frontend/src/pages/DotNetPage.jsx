@@ -131,7 +131,7 @@ const DotNetLanding = () => {
             <div className={styles.infoItem}>
               <span className={styles.infoIcon}>📞</span>
               <span className={styles.infoLabel}>Contact</span>
-              <span className={styles.infoValue}>7723400442</span>
+              <span className={styles.infoValue}>9923400442</span>
             </div>
 
             <div className={styles.infoDivider}></div>
