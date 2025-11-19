@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from '../styles/DotNetPage.module.css';
+import { Link } from "react-router-dom";
+
 
 const JavaDev = () => {
   return (
@@ -59,7 +61,7 @@ const JavaDev = () => {
                 <span className={styles.star}>⭐</span>
               </div>
 
-              <button className={styles.joinButton} type="button">JOIN NOW</button>
+              <Link to="/enrollment" className={styles.joinButton}>JOIN NOW</Link>
             </div>
 
             <div className={styles.imageSection} aria-hidden="true">
@@ -101,7 +103,10 @@ const JavaDev = () => {
             </p>
 
             <div className={styles.buttonGroup}>
-              <button className={styles.enrollButton} type="button">Enroll Now →</button>
+              <Link to="/enrollment" className={styles.joinButton}>
+        Enroll Now! →
+</Link>
+
               <button className={styles.syllabusButton} type="button">Download Syllabus</button>
             </div>
           </div>
@@ -198,7 +203,7 @@ const JavaDev = () => {
               </div>
             </div>
 
-            <button className={styles.enrollNowButton} type="button">Enroll Now! →</button>
+            <Link to="/enrollment" className={styles.joinButton}>Enroll Now! →</Link>
           </div>
         </div>
       </section>
