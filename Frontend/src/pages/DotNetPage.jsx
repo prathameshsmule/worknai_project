@@ -48,7 +48,9 @@ const DotNetLanding = () => {
                 <span className={styles.star}>⭐</span>
               </div>
 
-              <button className={styles.joinButton}>JOIN NOW</button>
+              <Link to="/enrollment" className={styles.joinButton}>
+                JOIN NOW
+              </Link>
             </div>
 
             {/* Image Section */}
