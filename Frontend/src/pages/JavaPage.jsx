@@ -86,9 +86,7 @@ const JavaDev = () => {
       </div>
 
       {/* Decorative stripes */}
-      <div className={styles.purpleStripe1} aria-hidden="true"></div>
-      <div className={styles.purpleStripe2} aria-hidden="true"></div>
-      <div className={styles.purpleStripe3} aria-hidden="true"></div>
+      
 
       {/* Intro / Hero 2 */}
       <section className={styles.newSection}>
