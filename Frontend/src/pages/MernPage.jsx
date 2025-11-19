@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '../styles/DotNetPage.module.css';
 
+import { Link } from "react-router-dom";
+
 const MernDev = () => {
   return (
     <>
@@ -54,7 +56,7 @@ const MernDev = () => {
                 <span className={styles.star}>⭐</span>
               </div>
 
-              <button className={styles.joinButton}>JOIN NOW</button>
+              <Link to="/enrollment" className={styles.joinButton}>JOIN NOW</Link>
             </div>
 
             {/* Image Section */}
@@ -80,9 +82,7 @@ const MernDev = () => {
       </div>
 
       {/* Background Decorations */}
-      <div className={styles.purpleStripe1}></div>
-      <div className={styles.purpleStripe2}></div>
-      <div className={styles.purpleStripe3}></div>
+     
 
       {/* New Section */}
       <div className={styles.newSection}>
@@ -102,9 +102,8 @@ const MernDev = () => {
             </p>
 
             <div className={styles.buttonGroup}>
-              <button className={styles.enrollButton}>
-                Enroll Now →
-              </button>
+             <Link to="/enrollment" className={styles.joinButton}>Enroll Now! →</Link>
+
               <button className={styles.syllabusButton}>
                 Download Syllabus
               </button>
@@ -247,9 +246,8 @@ const MernDev = () => {
               </div>
             </div>
 
-            <button className={styles.enrollNowButton}>
-              Enroll Now! →
-            </button>
+            <Link to="/enrollment" className={styles.joinButton}>Enroll Now! →</Link>
+
           </div>
         </div>
       </div>
