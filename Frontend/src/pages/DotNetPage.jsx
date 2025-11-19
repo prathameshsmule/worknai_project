@@ -7,8 +7,14 @@ const DotNetLanding = () => {
       <div className={styles.container}>
         {/* Logo */}
         <div className={styles.logo}>
+          <div className={styles.logoIcon}>
+            <div className={styles.logoCircle}>
+              <div className={styles.logoLeft}></div>
+              <div className={styles.logoRight}></div>
+            </div>
+          </div>
           <div className={styles.logoText}>
-         <span className={styles.logoSoftech}>WORKNAI</span>
+            <span className={styles.logoNewgen}>WORKNAI</span>
             <span className={styles.logoSoftech}>TECHNOLOGIES</span>
             <div className={styles.logoUnderline}></div>
           </div>
@@ -103,9 +109,7 @@ const DotNetLanding = () => {
             </p>
 
             <div className={styles.buttonGroup}>
-              <button className={styles.enrollButton}>
-                Enroll Now →
-              </button>
+             <Link to="/enrollment" className={styles.joinButton}>Enroll Now! →</Link>
               <button className={styles.syllabusButton}>
                 Download Syllabus
               </button>
@@ -248,9 +252,7 @@ const DotNetLanding = () => {
               </div>
             </div>
 
-            <button className={styles.enrollNowButton}>
-              Enroll Now! →
-            </button>
+            <Link to="/enrollment" className={styles.joinButton}>Enroll Now! →</Link>
           </div>
         </div>
       </div>
