@@ -82,10 +82,7 @@ const DotNetLanding = () => {
       </div>
 
       {/* Background Decorations */}
-      <div className={styles.purpleStripe1}></div>
-      <div className={styles.purpleStripe2}></div>
-      <div className={styles.purpleStripe3}></div>
-
+    
       {/* New Section */}
       <div className={styles.newSection}>
         <div className={styles.newSectionContent}>
