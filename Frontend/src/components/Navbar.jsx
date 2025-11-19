@@ -340,8 +340,11 @@ const Navbar = () => {
 
             {/* Right Actions */}
             <div className="nav-actions">
-             
+             <button className="search-btn" type="button">
+                🔍
+              </button>
 
+              
               <Link
                 className="enroll-btn"
                 to="/enrollment"
